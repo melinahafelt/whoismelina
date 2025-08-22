@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="sv">
 <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Who is Melina?</title>
   <style>
     body {
@@ -9,18 +11,33 @@
       color: #333;
       text-align: center;
       padding-top: 100px;
+      margin: 0;
     }
-    h1 {
-      font-size: 48px;
+    h1 { font-size: 48px; margin: 0 0 8px; }
+    p  { font-size: 20px; color: #666; margin: 0 0 28px; }
+    .player {
+      width: min(90vw, 560px);
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,.12);
     }
-    p {
-      font-size: 20px;
-      color: #666;
-    }
+    iframe { display: block; width: 100%; border: 0; }
   </style>
 </head>
 <body>
   <h1>Hi, </h1>
   <p>Building something fun, stay tuned :)) </p>
+
+  <!-- YouTube: ersätt REPLACE_VIDEO_ID med din låts ID -->
+  <div class="player">
+    <iframe
+      height="315"
+      src="https://www.youtube.com/embed/REPLACE_VIDEO_ID"
+      title="YouTube video player"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
 </body>
 </html>
